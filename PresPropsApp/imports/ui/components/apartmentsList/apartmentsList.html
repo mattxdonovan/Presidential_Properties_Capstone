@@ -1,0 +1,16 @@
+<h1>Currently available listings:</h1>
+
+<ul>
+  <li ng-repeat="apartment in apartmentsList.apartments">
+    <a ui-sref="apartmentDetails({ apartmentId:apartment._id })">
+      {{apartment.title}}
+    </a>
+    <p>Price: {{apartment.price}} </p>
+    <p>Bedrooms: {{apartment.bedrooms}} </p>
+    <p>Bathrooms: {{apartment.bathrooms}} </p>
+    <p>Status: {{apartment.status}} </p>
+    <div class="item item-image">
+      <img src="{{apartment.piclink}}" alt="" />
+    </div>
+  </li>
+</ul>
