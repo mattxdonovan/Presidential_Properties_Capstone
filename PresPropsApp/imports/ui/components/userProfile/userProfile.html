@@ -1,2 +1,37 @@
-<h1>User Profile</h1>
-<apartment-details></apartment-details>
+
+<div ng-repeat="favorite in userProfile.favoritesFind">
+  <h2><a ui-sref="apartmentDetails({ apartmentId:favorite.favoriteId})">  {{favorite.title}}  </a></h2>
+  <h3>{{favorite.price}}</h3>
+  <div class="">
+    <img src="images/bed-icon.png" alt="" /><p>{{favorite.beds}}</p>
+  </div>
+  <div class="">
+    <img src="images/shower-icon.png" alt="" /><p>{{favorite.baths}}</p>
+  </div>
+  <div class="item item-image">
+    <img src="{{favorite.piclink}}" alt="" />
+  </div>
+</div>
+<!-- <ion-view title="Profile">
+  <ion-nav-buttons side="right">
+    <button ng-click="profile.updateName()" ng-disabled="!profile.name || profile.name.length === 0" class="button button-clear button-positive">Done</button>
+  </ion-nav-buttons>
+
+  <ion-content class="profile">
+    <a class="profile-picture positive">
+      <div class="upload-placehoder">
+        Add photo
+      </div>
+    </a>
+
+    <div class="instructions">
+      Enter your name and add an optional profile picture
+    </div>
+
+    <div class="list profile-name">
+      <label class="item item-input">
+        <input ng-model="profile.name" on-return="profile.updateName()" type="text" placeholder="Your name">
+      </label>
+    </div>
+  </ion-content>
+</ion-view> -->

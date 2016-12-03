@@ -5,7 +5,9 @@ import uiRouter from 'angular-ui-router';
 import template from './presidential.html';
 import { name as ApartmentsList } from '../apartmentsList/apartmentsList';
 import { name as ApartmentDetails } from '../apartmentDetails/apartmentDetails';
-// import { name as UserFavorites } from '../userFavorites/userFavorites';
+import { name as UserProfile } from '../userProfile/userProfile';
+import { name as NeighborhoodInfo } from '../neighborhoodInfo/neighborhoodInfo';
+
 import { name as Navigation } from '../navigation/navigation';
 
 class Presidential {}
@@ -19,6 +21,8 @@ export default angular.module(name, [
   ApartmentsList,
   ApartmentDetails,
   Navigation,
+  UserProfile,
+  NeighborhoodInfo,
   // UserFavorites
   'accounts.ui'
   ]).component(name, {

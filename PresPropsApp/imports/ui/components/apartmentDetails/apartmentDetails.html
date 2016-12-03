@@ -1,13 +1,25 @@
-<!-- <add-favorites></add-favorites> -->
+<add-favorite></add-favorite>
+
 <h1>{{apartmentDetails.apartmentFind.title}}</h1>
-<input ng-model='apartmentDetails.apartmentId' />
-<input ng-model='this.userId' />
+<h3>{{apartmentDetails.apartmentFind.price}}</h3>
+<!-- <form>
+  <input ng-hide='true' ng-model='apartmentDetails.apartmentId' />
+  <input ng-hide='true' ng-model='apartmentDetails.findId'/>
+  <button ng-click="addFavorite.save()">Save to Favorites</button>
+</form> -->
 
-
-    <p>Price: {{apartmentDetails.apartmentFind.price}}</p>
-    Bedrooms: {{apartmentDetails.apartmentFind.bedrooms}}</p>
-    <p>Bathrooms: {{apartmentDetails.apartmentFind.bathrooms}}</p>
-    <p>Status: {{apartmentDetails.apartmentFind.status}}</p>
+    <div class="">
+      <img src="images/bed-icon.png" alt="" /><p>Bedrooms:<br> {{apartmentDetails.apartmentFind.bedrooms}}</p>
+    </div>
+    <div class="">
+      <img src="images/shower-icon.png" alt="" /><p>Bathrooms:<br> {{apartmentDetails.apartmentFind.bathrooms}}</p>
+    </div>
+    <div class="">
+      <i class="ion-home"></i><p>Type:<br> {{apartmentDetails.apartmentFind.type}}</p>
+    </div>
+    <div class="">
+      <i class="ion-pricetag"></i><p>Status:<br> {{apartmentDetails.apartmentFind.status}}</p>
+    </div>
     <div class="item item-image">
       <img src="{{apartmentDetails.apartmentFind.piclink}}" alt="" />
     </div>
@@ -32,6 +44,5 @@
     <div class="item item-image">
       <img src="{{apartmentDetails.apartmentFind.image7}}" alt="" />
     </div>
-  </li>
-</ul>
-<button ui-sref="apartments">Back</button>
+
+<button ui-sref="apartments">Back to Available Listings</button>

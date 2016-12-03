@@ -2,7 +2,12 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
 
+import { Meteor } from 'meteor/meteor';
+import { Accounts } from 'meteor/accounts-base'
+
 import template from './apartmentDetails.html';
+import { name as AddFavorite } from '../addFavorite/addFavorite';
+import { name as UserProfile } from '../userProfile/userProfile';
 import { Apartments } from '../../../api/apartments';
 
 class ApartmentDetails {
@@ -20,6 +25,11 @@ class ApartmentDetails {
           });
         }
       });
+      this.helpers({
+        findId() {
+          return Meteor.userId();
+        }
+      });
     }
   }
 
@@ -28,7 +38,8 @@ const name = 'apartmentDetails';
 // create a module
 export default angular.module(name, [
   angularMeteor,
-  uiRouter
+  uiRouter,
+  AddFavorite
 ]).component(name, {
   template,
   controllerAs: name,
@@ -38,9 +49,9 @@ export default angular.module(name, [
 
 function config($stateProvider) {
   'ngInject';
-
   $stateProvider.state('apartmentDetails', {
     url: '/apartment/:apartmentId',
     template: '<apartment-details></apartment-details>'
   });
+
 }

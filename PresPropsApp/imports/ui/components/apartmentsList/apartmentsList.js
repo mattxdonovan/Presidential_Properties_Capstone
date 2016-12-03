@@ -24,10 +24,11 @@ const name = 'apartmentsList';
 
 // create a module
 export default angular.module(name, [
-  angularMeteor
+  angularMeteor,
+  uiRouter,
+  'accounts.ui'
 ]).component(name, {
   template,
-  uiRouter,
   controllerAs: name,
   controller: ApartmentsList
 })

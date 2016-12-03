@@ -1,16 +1,21 @@
 <h1>Currently available listings:</h1>
 
-<ul>
-  <li ng-repeat="apartment in apartmentsList.apartments">
-    <a ui-sref="apartmentDetails({ apartmentId:apartment._id })">
-      {{apartment.title}}
-    </a>
-    <p>Price: {{apartment.price}} </p>
-    <p>Bedrooms: {{apartment.bedrooms}} </p>
-    <p>Bathrooms: {{apartment.bathrooms}} </p>
-    <p>Status: {{apartment.status}} </p>
+  <div ng-repeat="apartment in apartmentsList.apartments">
+    <h2><a ui-sref="apartmentDetails({ apartmentId:apartment._id })">  {{apartment.title}}  </a></h2>
+    <h3>{{apartment.price}}</h3>
+    <div class="">
+      <img src="images/bed-icon.png" alt="" /><p>Bedrooms:<br> {{apartment.bedrooms}}</p>
+    </div>
+    <div class="">
+      <img src="images/shower-icon.png" alt="" /><p>Bathrooms:<br> {{apartment.bathrooms}}</p>
+    </div>
+    <div class="">
+      <i class="ion-home"></i><p>Type:<br> {{apartment.type}}</p>
+    </div>
+    <div class="">
+      <i class="ion-pricetag"></i><p>Status:<br> {{apartment.status}}</p>
+    </div>
     <div class="item item-image">
       <img src="{{apartment.piclink}}" alt="" />
     </div>
-  </li>
-</ul>
+  </div>
