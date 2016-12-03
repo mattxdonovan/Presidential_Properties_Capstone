@@ -4,6 +4,7 @@ import uiRouter from 'angular-ui-router';
 
 import template from './apartmentsList.html';
 import { Apartments } from '../../../api/apartments';
+import { name as RemoveFavorite } from '../removeFavorite/removeFavorite'
 
 
 class ApartmentsList {
@@ -26,6 +27,7 @@ const name = 'apartmentsList';
 export default angular.module(name, [
   angularMeteor,
   uiRouter,
+  RemoveFavorite,
   'accounts.ui'
 ]).component(name, {
   template,

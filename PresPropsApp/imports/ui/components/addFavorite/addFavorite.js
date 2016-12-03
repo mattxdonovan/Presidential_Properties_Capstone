@@ -31,8 +31,8 @@
           Favorites.insert({
             user_id: Meteor.userId(),
             favoriteId: this.apartmentId,
-            beds: this.apartmentFind.beds,
-            baths: this.apartmentFind.baths,
+            beds: this.apartmentFind.bedrooms,
+            baths: this.apartmentFind.bathrooms,
             title: this.apartmentFind.title,
             price: this.apartmentFind.price,
             piclink: this.apartmentFind.piclink

@@ -1,4 +1,5 @@
 
+
 <div ng-repeat="favorite in userProfile.favoritesFind">
   <h2><a ui-sref="apartmentDetails({ apartmentId:favorite.favoriteId})">  {{favorite.title}}  </a></h2>
   <h3>{{favorite.price}}</h3>
@@ -11,6 +12,7 @@
   <div class="item item-image">
     <img src="{{favorite.piclink}}" alt="" />
   </div>
+  <remove-favorite favorite="favorite"></remove-favorite>
 </div>
 <!-- <ion-view title="Profile">
   <ion-nav-buttons side="right">

@@ -10,6 +10,7 @@ import { Apartments } from '../../../api/apartments';
 import { name as ApartmentDetails } from '../apartmentDetails/apartmentDetails';
 import { name as ApartmentsList } from '../apartmentsList/apartmentsList';
 import { name as AddFavorite } from '../addFavorite/addFavorite';
+import { name as RemoveFavorite } from '../removeFavorite/removeFavorite';
 import { Favorites } from '../../../api/favorites';
 
 class UserProfile {
@@ -27,8 +28,15 @@ class UserProfile {
         });
       }
     });
+      this.helpers({
+        findUser() {
+          return Meteor.users.find({
+            user_id: $stateParams.userId
+          });
+        }
+      });
+    }
   }
-}
 
 const name = 'userProfile';
 
@@ -36,6 +44,7 @@ const name = 'userProfile';
  export default angular.module(name, [
    angularMeteor,
    uiRouter,
+   RemoveFavorite,
    'accounts.ui'
  ]).component(name, {
    template,

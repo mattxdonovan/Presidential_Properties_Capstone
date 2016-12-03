@@ -83,3 +83,9 @@ Meteor.startup(() => {
     });
   }
 });
+
+Apartments.deny({
+  update: function() {
+    return true;
+  }
+});
