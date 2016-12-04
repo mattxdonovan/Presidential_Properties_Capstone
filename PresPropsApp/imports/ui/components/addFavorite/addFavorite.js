@@ -8,8 +8,8 @@
   import template from './addFavorite.html';
   import { name as ApartmentDetails } from '../apartmentDetails/apartmentDetails';
   import { name as UserProfile } from '../userProfile/userProfile';
-  import { Apartments } from '../../../api/apartments';
-  import { Favorites } from '../../../api/favorites';
+  import { Apartments } from '../../../api/apartments/collection';
+  import { Favorites } from '../../../api/favorites/collection';
 
   class AddFavorite {
     constructor($scope, $reactive, $stateParams) {
@@ -18,6 +18,8 @@
       $reactive(this).attach($scope);
 
       this.apartmentId = $stateParams.apartmentId;
+
+      // this.subscribe('favorites');
 
       this.helpers({
         apartmentFind() {

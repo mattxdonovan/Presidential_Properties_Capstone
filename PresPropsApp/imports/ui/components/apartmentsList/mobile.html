@@ -1,0 +1,47 @@
+<ion-view hide-back-button="true">
+  <ion-content padding="true" class="has-header">
+    <div class="bannerTop">
+      <h1 class="md-display-1">We Know Boston.</h1>
+      <h3 class="md-display-1">Presidential Properties is a brokerage <br> dedicated to the Hub.</h3>
+  </div>
+      <h2 class="md-display-1" id='headText'>All Currently Available Apartments:</h2>
+
+      <div layout="row" layout-padding>
+        <md-input-container>
+          <label>Search</label>
+          <input ng-model="apartments.searchText">
+        </md-input-container>
+
+        <apartments-sort on-change="apartments.sortChanged(sort)" property="name" order="1"></apartments-sort>
+      </div>
+
+    <div class="list list-mobile">
+      <!-- <div class="card" ng-repeat="apartment in apartments"> -->
+        <div class="card" ng-repeat="apartment in apartmentsList.apartments">
+        <div class="item">
+          <h2>
+            {{apartment.title}}
+          </h2>
+          <p>
+            {{apartment.price}}
+            {{apartment.bedrooms}}
+            {{apartment.bathrooms}}
+            {{apartment.status}}
+            {{apartment.price}}
+            {{apartment.price}}
+          </p>
+            <div class="item item-image">
+            {{apartment.piclink}}
+            </div>
+        </div>
+
+        <!-- <div class="item item-image">
+          <apartment-image images="apartment.piclink"></apartment-image>
+        </div> -->
+      </div>
+    </div>
+    <!-- <div flex="50">
+      <boston-map apartments="apartmentsList.apartments"></boston-map>
+    </div> -->
+  </ion-content>
+</ion-view>

@@ -8,13 +8,15 @@ import { Accounts } from 'meteor/accounts-base'
 import template from './apartmentDetails.html';
 import { name as AddFavorite } from '../addFavorite/addFavorite';
 import { name as UserProfile } from '../userProfile/userProfile';
-import { Apartments } from '../../../api/apartments';
+import { Apartments } from '../../../api/apartments/collection';
 
 class ApartmentDetails {
   constructor($scope, $reactive, $stateParams) {
     'ngInject';
 
     $reactive(this).attach($scope);
+
+    // this.subscribe('apartments');
 
     this.apartmentId = $stateParams.apartmentId;
 
@@ -39,7 +41,8 @@ const name = 'apartmentDetails';
 export default angular.module(name, [
   angularMeteor,
   uiRouter,
-  AddFavorite
+  AddFavorite,
+  'accounts.ui'
 ]).component(name, {
   template,
   controllerAs: name,
@@ -52,6 +55,15 @@ function config($stateProvider) {
   $stateProvider.state('apartmentDetails', {
     url: '/apartment/:apartmentId',
     template: '<apartment-details></apartment-details>'
+  //   resolve: {
+  //   currentUser($q) {
+  //     if (Meteor.userId() === null) {
+  //       return $q.resolve();
+  //     } else {
+  //       return $q.resolve();
+  //     }
+  //   }
+  // }
   });
 
 }

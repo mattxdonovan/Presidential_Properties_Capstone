@@ -3,6 +3,8 @@ import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
 
 import template from './presidential.html';
+import { Apartments } from '../../../api/apartments/collection';
+import { Favorites } from '../../../api/favorites/collection';
 import { name as ApartmentsList } from '../apartmentsList/apartmentsList';
 import { name as ApartmentDetails } from '../apartmentDetails/apartmentDetails';
 import { name as UserProfile } from '../userProfile/userProfile';
@@ -30,7 +32,8 @@ export default angular.module(name, [
   controllerAs: name,
   controller: Presidential
 })
-  .config(config);
+  .config(config)
+  // .run(run);
 
 function config($locationProvider, $urlRouterProvider) {
   'ngInject';
@@ -38,4 +41,15 @@ function config($locationProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
 
   $urlRouterProvider.otherwise('/apartments');
+}
+function run($rootScope, $state) {
+  'ngInject';
+  //
+  // $rootScope.$on('$stateChangeError',
+  //   (event, toState, toParams, fromState, fromParams, error) => {
+  //     if (error === 'AUTH_REQUIRED') {
+  //       $state.go('apartments');
+  //     }
+  //   }
+  // );
 }

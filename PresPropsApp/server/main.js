@@ -1,9 +1,9 @@
 import { Meteor } from 'meteor/meteor';
 
-
 import { Apartments } from '../imports/api/apartments';
 import { Favorites } from '../imports/api/favorites';
 import '../imports/api/users';
+
 
 Meteor.startup(() => {
   if (Apartments.find().count() === 0) {
@@ -81,11 +81,5 @@ Meteor.startup(() => {
     apartments.forEach((apartment) => {
       Apartments.insert(apartment)
     });
-  }
-});
-
-Apartments.deny({
-  update: function() {
-    return true;
   }
 });

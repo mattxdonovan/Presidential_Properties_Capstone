@@ -4,12 +4,12 @@ export const Favorites = new Mongo.Collection('favorites');
 
 Favorites.allow({
   insert(userId, favorite) {
-    return userId && favorite.owner === userId;
+    return userId === userId;
   },
   update(userId, favorite, fields, modifier) {
-    return userId && favorite.owner === userId;
+    return userId === userId;
   },
   remove(userId, favorite) {
-    return userId && favorite.owner === userId;
+    return userId === userId;
   }
 });

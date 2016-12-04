@@ -5,8 +5,8 @@ import uiRouter from 'angular-ui-router';
 import { Meteor } from 'meteor/meteor';
 
 import template from './userFavorites.html';
-import { Favorites } from '../../../api/favorites';
-import { Apartments } from '../../../api/apartments';
+import { Favorites } from '../../../api/favorites/collection';
+import { Apartments } from '../../../api/apartments/collection';
 
 class UserFavorites {
   constructor($scope, $reactive) {

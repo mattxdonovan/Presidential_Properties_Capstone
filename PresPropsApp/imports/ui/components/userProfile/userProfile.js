@@ -6,12 +6,13 @@ import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base'
 
 import template from './userProfile.html';
-import { Apartments } from '../../../api/apartments';
+import { Apartments } from '../../../api/apartments/collection';
+import { Favorites } from '../../../api/favorites/collection';
+
 import { name as ApartmentDetails } from '../apartmentDetails/apartmentDetails';
 import { name as ApartmentsList } from '../apartmentsList/apartmentsList';
 import { name as AddFavorite } from '../addFavorite/addFavorite';
 import { name as RemoveFavorite } from '../removeFavorite/removeFavorite';
-import { Favorites } from '../../../api/favorites';
 
 class UserProfile {
   constructor($scope, $reactive, $stateParams) {
@@ -59,5 +60,14 @@ const name = 'userProfile';
      .state('userProfile', {
        url: '/profile/:userId',
        template: '<user-profile></user-profile>'
+//        resolve: {
+//   currentUser($q) {
+//     if (Meteor.userId() === null) {
+//       return $q.reject('You must be logged in!');
+//     } else {
+//       return $q.resolve();
+//     }
+//   }
+// }
      });
  }

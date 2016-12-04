@@ -3,7 +3,7 @@ import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
 
 import template from './apartmentsList.html';
-import { Apartments } from '../../../api/apartments';
+import { Apartments } from '../../../api/apartments/collection';
 import { name as RemoveFavorite } from '../removeFavorite/removeFavorite'
 
 
@@ -12,6 +12,8 @@ class ApartmentsList {
     'ngInject';
 
     $reactive(this).attach($scope);
+
+    // this.subscribe('apartments');
 
     this.helpers({
       apartments() {
@@ -42,5 +44,14 @@ function config($stateProvider) {
     .state('apartments', {
       url: '/apartments',
       template: '<apartments-list></apartments-list>'
+    //   resolve: {
+    //   currentUser($q) {
+    //     if (Meteor.userId() === null) {
+    //       return $q.resolve();
+    //     } else {
+    //       return $q.resolve();
+    //     }
+    //   }
+    // }
     });
 }
