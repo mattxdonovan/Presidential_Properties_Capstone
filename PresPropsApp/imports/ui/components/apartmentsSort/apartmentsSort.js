@@ -7,11 +7,9 @@ import { Accounts } from 'meteor/accounts-base'
 
 import webTemplate from './web.html';
 import mobileTemplate from './mobile.html';
-import { name as AddFavorite } from '../addFavorite/addFavorite';
-import { name as UserProfile } from '../userProfile/userProfile';
 import { Apartments } from '../../../api/apartments/collection';
 
-class ApartmentDetails {
+class ApartmentSort {
   constructor($scope, $reactive, $stateParams) {
     'ngInject';
 
@@ -36,7 +34,7 @@ class ApartmentDetails {
     }
   }
 
-const name = 'apartmentDetails';
+const name = 'apartmentSort';
 const template = Meteor.isCordova ? mobileTemplate : webTemplate;
 
 // create a module
@@ -48,15 +46,15 @@ export default angular.module(name, [
 ]).component(name, {
   template,
   controllerAs: name,
-  controller: ApartmentDetails
+  controller: ApartmentSort
 })
   .config(config);
 
 function config($stateProvider) {
   'ngInject';
-  $stateProvider.state('apartmentDetails', {
+  $stateProvider.state('apartmentSort', {
     url: '/apartment/:apartmentId',
-    template: '<apartment-details></apartment-details>'
+    template: '<apartment-sort></apartment-sort>'
   //   resolve: {
   //   currentUser($q) {
   //     if (Meteor.userId() === null) {

@@ -5,7 +5,8 @@ import uiRouter from 'angular-ui-router';
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base'
 
-import template from './userProfile.html';
+import webTemplate from './web.html';
+import mobileTemplate from './mobile.html';
 import { Apartments } from '../../../api/apartments/collection';
 import { Favorites } from '../../../api/favorites/collection';
 
@@ -40,6 +41,7 @@ class UserProfile {
   }
 
 const name = 'userProfile';
+const template = Meteor.isCordova ? mobileTemplate : webTemplate;
 
 
  export default angular.module(name, [

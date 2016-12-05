@@ -2,8 +2,10 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
 
-import template from './neighborhoodInfo.html';
+import { Meteor } from 'meteor/meteor';
 
+import webTemplate from './web.html';
+import mobileTemplate from './mobile.html';
 
 class NeighborhoodInfo {
   constructor($stateParams) {
@@ -12,6 +14,7 @@ class NeighborhoodInfo {
 }
 
 const name = 'neighborhoodInfo';
+const template = Meteor.isCordova ? mobileTemplate : webTemplate;
 
  // create a module
  export default angular.module(name, [

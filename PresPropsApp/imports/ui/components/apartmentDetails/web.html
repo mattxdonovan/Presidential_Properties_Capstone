@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <add-favorite></add-favorite>
+      <h1>{{apartmentDetails.apartmentFind.title}}</h1>
+      <h3>{{apartmentDetails.apartmentFind.price}}</h3>
+          <div class="">
+            <img src="images/bed-icon.png" alt="" /><p>Bedrooms:<br> {{apartmentDetails.apartmentFind.bedrooms}}</p>
+          </div>
+          <div class="">
+            <img src="images/shower-icon.png" alt="" /><p>Bathrooms:<br> {{apartmentDetails.apartmentFind.bathrooms}}</p>
+          </div>
+          <div class="">
+            <i class="ion-home"></i><p>Type:<br> {{apartmentDetails.apartmentFind.type}}</p>
+          </div>
+          <div class="">
+            <i class="ion-pricetag"></i><p>Status:<br> {{apartmentDetails.apartmentFind.status}}</p>
+          </div>
+          <div class="item item-image">
+            <img src="{{apartmentDetails.apartmentFind.piclink}}" alt="" />
+          </div>
+          <div class="item item-image">
+            <img src="{{apartmentDetails.apartmentFind.image1}}" alt="" />
+          </div>
+          <div class="item item-image">
+            <img src="{{apartmentDetails.apartmentFind.image2}}" alt="" />
+          </div>
+          <div class="item item-image">
+            <img src="{{apartmentDetails.apartmentFind.image3}}" alt="" />
+          </div>
+          <div class="item item-image">
+            <img src="{{apartmentDetails.apartmentFind.image4}}" alt="" />
+          </div>
+          <div class="item item-image">
+            <img src="{{apartmentDetails.apartmentFind.image5}}" alt="" />
+          </div>
+          <div class="item item-image">
+            <img src="{{apartmentDetails.apartmentFind.image6}}" alt="" />
+          </div>
+          <div class="item item-image">
+            <img src="{{apartmentDetails.apartmentFind.image7}}" alt="" />
+          </div>
+
+      <button ui-sref="apartments">Back to Available Listings</button>
+    </div>
+  </div>
+</div>

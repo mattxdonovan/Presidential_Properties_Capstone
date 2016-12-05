@@ -22,5 +22,9 @@ accounts-password
 dotansimha:accounts-ui-angular
 accounts-facebook
 accounts-twitter
-less
+tmeasday:publish-counts
+less@2.7.5_1
+email@1.1.17_1
+
 autopublish
+#driftyco:ionic

@@ -2,9 +2,13 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
 
-import template from './apartmentsList.html';
+import { Meteor } from 'meteor/meteor';
+
+import webTemplate from './web.html';
+import mobileTemplate from './mobile.html';
 import { Apartments } from '../../../api/apartments/collection';
 import { name as RemoveFavorite } from '../removeFavorite/removeFavorite'
+import { name as BostonMap } from '../bostonMap/bostonMap'
 
 
 class ApartmentsList {
@@ -24,12 +28,14 @@ class ApartmentsList {
 }
 
 const name = 'apartmentsList';
+const template = Meteor.isCordova ? mobileTemplate : webTemplate;
 
 // create a module
 export default angular.module(name, [
   angularMeteor,
   uiRouter,
   RemoveFavorite,
+  BostonMap,
   'accounts.ui'
 ]).component(name, {
   template,

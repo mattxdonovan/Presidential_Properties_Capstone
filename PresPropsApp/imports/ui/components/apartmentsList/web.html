@@ -1,0 +1,37 @@
+
+<div layout="column" layout-padding>
+  <div class="bannerTop">
+    <h1 class="md-display-1">We Know Boston.</h1>
+    <h3 class="md-display-1">Presidential Properties is a brokerage <br> dedicated to the Hub.</h3>
+</div>
+    <h2 class="md-display-1" id='headText'>All Currently Available Apartments:</h2>
+
+<!-- <div class="container-fluid"> -->
+  <div class="row">
+    <div class="col-md-12">
+      <div ng-repeat="apartment in apartmentsList.apartments">
+        <h2><a ui-sref="apartmentDetails({ apartmentId:apartment._id })">  {{apartment.title}}  </a></h2>
+        <div class="apartment-description">
+          <h3>{{apartment.price}}</h3>
+          <div class="">
+            <img src="images/bed-icon.png" alt="" /><p>Bedrooms:<br> {{apartment.bedrooms}}</p>
+          </div>
+          <div class="">
+            <img src="images/shower-icon.png" alt="" /><p>Bathrooms:<br> {{apartment.bathrooms}}</p>
+          </div>
+          <div class="">
+            <!-- <i class="ion-home"></i> -->
+            <p>Type:<br> {{apartment.type}}</p>
+          </div>
+          <div class="">
+            <!-- <i class="ion-pricetag"></i> -->
+            <p>Status:<br> {{apartment.status}}</p>
+          </div>
+          <div class="item item-image">
+            <img src="{{apartment.piclink}}" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->

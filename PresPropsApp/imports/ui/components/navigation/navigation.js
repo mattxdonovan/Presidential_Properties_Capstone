@@ -5,7 +5,8 @@ import uiRouter from 'angular-ui-router';
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 
-import template from './navigation.html';
+import webTemplate from './web.html';
+import mobileTemplate from './mobile.html';
 import { name as ApartmentDetails } from '../apartmentDetails/apartmentDetails';
 
 class Navigation {
@@ -25,6 +26,7 @@ class Navigation {
 }
 
 const name = 'navigation';
+const template = Meteor.isCordova ? mobileTemplate : webTemplate;
 
 // create a module
 export default angular.module(name, [
