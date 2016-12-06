@@ -1,52 +1,84 @@
 <ion-view hide-back-button="true">
-  <ion-content padding="true" class="has-header">
-
-    <div class="list list-mobile">
-      <div class="card">
-        <div class="list-mobile">
-          <add-favorite></add-favorite>
-        </div>
-          <div class="item-header">
-            <h2>{{apartmentDetails.apartmentFind.title}}</h2>
-            <h3>{{apartmentDetails.apartmentFind.price}}</h3>
-          </div>
-          <div class="item-text">
-            <img src="images/bed-icon.png" alt="" /><p>Bedrooms: <br> {{apartmentDetails.apartmentFind.bedrooms}}</p>
-          </div>
-          <div class="item-text">
-            <img src="images/shower-icon.png" alt="" /><p>Bathrooms: <br> {{apartmentDetails.apartmentFind.bathrooms}}</p>
-          </div>
-          <div class="item-text">
-            <i class="ion-home"></i><p>Type: <br> {{apartmentDetails.apartmentFind.type}}</p>
-          </div>
-          <div class="item-text">
-            <i class="ion-pricetag"></i><p>Status: <br> {{apartmentDetails.apartmentFind.status}}</p>
-          </div>
-          <div class="item item-image">
-            <img src="{{apartmentDetails.apartmentFind.piclink}}" alt="" />
-          </div>
-          <div class="item item-image">
-            <img src="{{apartmentDetails.apartmentFind.image1}}" alt="" />
-          </div>
-          <div class="item item-image">
-            <img src="{{apartmentDetails.apartmentFind.image2}}" alt="" />
-          </div>
-          <div class="item item-image">
-            <img src="{{apartmentDetails.apartmentFind.image3}}" alt="" />
-          </div>
-          <div class="item item-image">
-            <img src="{{apartmentDetails.apartmentFind.image4}}" alt="" />
-          </div>
-          <div class="item item-image">
-            <img src="{{apartmentDetails.apartmentFind.image5}}" alt="" />
-          </div>
-          <div class="item item-image">
-            <img src="{{apartmentDetails.apartmentFind.image6}}" alt="" />
-          </div>
-          <div class="item item-image">
-            <img src="{{apartmentDetails.apartmentFind.image7}}" alt="" />
-          </div>
+  <ion-content padding="false" class="has-header has-footer">
+    <div class="list card">
+      <div class="item item-avatar">
+        <img src="images/presPropsLogo.png">
+        <h2>{{apartmentDetails.apartmentFind.title}}</h2>
+        <h3>{{apartmentDetails.apartmentFind.price}}</h3>
       </div>
-    <button ui-sref="apartments">Back to Available Listings</button>
+
+      <div class="item item-image">
+        <img src="{{apartmentDetails.apartmentFind.piclink}}">
+      </div>
+      <div class="item item-image">
+        <img src="{{apartmentDetails.apartmentFind.image1}}">
+      </div>
+      <div class="item item-image">
+        <img src="{{apartmentDetails.apartmentFind.image2}}">
+      </div>
+      <div class="item item-image">
+        <img src="{{apartmentDetails.apartmentFind.image3}}">
+      </div>
+      <div class="item item-image">
+        <img src="{{apartmentDetails.apartmentFind.image4}}">
+      </div>
+      <div class="item item-image">
+        <img src="{{apartmentDetails.apartmentFind.image5}}">
+      </div>
+      <div class="item item-image">
+        <img src="{{apartmentDetails.apartmentFind.image6}}">
+      </div>
+      <div class="item item-image">
+        <img src="{{apartmentDetails.apartmentFind.image7}}">
+      </div>
+
+      <add-favorite></add-favorite>
+
+    </div>
   </ion-content>
 </ion-view>
+<!-- <div class="list list-mobile">
+  <div class="card">
+    <add-favorite></add-favorite>
+    <div class="item-header">
+      <h2>{{apartmentDetails.apartmentFind.title}}</h2>
+      <h3>{{apartmentDetails.apartmentFind.price}}</h3>
+    </div>
+    <div class="item-text">
+      <img src="images/bed-icon.png" alt="" /><p>Bedrooms: <br> {{apartmentDetails.apartmentFind.bedrooms}}</p>
+    </div>
+    <div class="item-text">
+      <img src="images/shower-icon.png" alt="" /><p>Bathrooms: <br> {{apartmentDetails.apartmentFind.bathrooms}}</p>
+    </div>
+    <div class="item-text">
+      <i class="ion-home"></i><p>Type: <br> {{apartmentDetails.apartmentFind.type}}</p>
+    </div>
+    <div class="item-text">
+      <i class="ion-pricetag"></i><p>Status: <br> {{apartmentDetails.apartmentFind.status}}</p>
+    </div>
+    <div class="item item-image">
+      <img src="{{apartmentDetails.apartmentFind.piclink}}" alt="" />
+    </div>
+    <div class="item item-image">
+      <img src="{{apartmentDetails.apartmentFind.image1}}" alt="" />
+    </div>
+    <div class="item item-image">
+      <img src="{{apartmentDetails.apartmentFind.image2}}" alt="" />
+    </div>
+    <div class="item item-image">
+      <img src="{{apartmentDetails.apartmentFind.image3}}" alt="" />
+    </div>
+    <div class="item item-image">
+      <img src="{{apartmentDetails.apartmentFind.image4}}" alt="" />
+    </div>
+    <div class="item item-image">
+      <img src="{{apartmentDetails.apartmentFind.image5}}" alt="" />
+    </div>
+    <div class="item item-image">
+      <img src="{{apartmentDetails.apartmentFind.image6}}" alt="" />
+    </div>
+    <div class="item item-image">
+      <img src="{{apartmentDetails.apartmentFind.image7}}" alt="" />
+    </div>
+  </div>
+</div> -->

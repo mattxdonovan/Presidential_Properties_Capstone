@@ -1,24 +1,22 @@
-<ion-header>
-  <ion-menu [content]="content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Pages</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <button ion-item (click)="openPage(loginPage)">
-          Login
-        </button>
-        <button ion-item (click)="openPage(signupPage)">
-          Signup
-        </button>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
-</ion-header>
+<div class="bar bar-header">
+  <button class="button button-icon icon ion-navicon"></button>
+  <div class="h1 title">Presidential Properties</div>
+  <button class="button button-clear button-positive"></button>
+</div>
 
-
-<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+<div class="tabs tabs-icon-top">
+  <a class="tab-item" ui-sref="apartments">
+    <i class="icon ion-home"></i>
+    Home
+  </a>
+  <a class="tab-item" ui-sref="userProfile({ userId: navigation.findUserId })">
+    <i class="icon ion-star"></i>
+    Favorites
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-person"></i>
+    Profile
+  </a>
+</div>
 
 <ion-nav-view></ion-nav-view>

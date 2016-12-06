@@ -1,6 +1,9 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
+import 'ionic-sdk/release/js/ionic';
+import 'ionic-sdk/release/js/ionic-angular';
+import 'ionic-sdk/release/css/ionic.css';
 
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
@@ -8,6 +11,7 @@ import { Accounts } from 'meteor/accounts-base';
 import webTemplate from './web.html';
 import mobileTemplate from './mobile.html';
 import { name as ApartmentDetails } from '../apartmentDetails/apartmentDetails';
+
 
 class Navigation {
   constructor($scope, $reactive, $stateParams) {
@@ -33,7 +37,8 @@ export default angular.module(name, [
   angularMeteor,
   uiRouter,
   ApartmentDetails,
-  'accounts.ui'
+  'accounts.ui',
+  'ionic'
 ]).component(name, {
   template,
   controllerAs: name,
