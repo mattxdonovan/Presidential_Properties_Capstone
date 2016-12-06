@@ -18,6 +18,8 @@ import { name as ApartmentsList } from '../apartmentsList/apartmentsList';
 import { name as ApartmentDetails } from '../apartmentDetails/apartmentDetails';
 import { name as UserProfile } from '../userProfile/userProfile';
 import { name as Navigation } from '../navigation/navigation';
+import { name as Neighborhoods } from '../neighborhoodInfo/neighborhoodInfo';
+
 
 class Presidential {}
 
@@ -34,6 +36,7 @@ export default angular.module(name, [
   ApartmentDetails,
   Navigation,
   UserProfile,
+  Neighborhoods,
   'accounts.ui',
   'ionic'
   ]).component(name, {
