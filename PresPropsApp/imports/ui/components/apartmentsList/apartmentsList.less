@@ -1,16 +1,19 @@
 apartments-list {
-  > div:first-child {
-    height: calc(~"100vh - 104px");
-  }
+  // > div:first-child {
+  //   height: calc(~"100vh - 104px");
+  //
+  // }
   [ui-sref] {
     cursor: pointer;
   }
   .bannerTop{
     background-image: url('images/beaconhill1-darker.jpg');
-    background-size: cover;
+    background-size:  cover;
     background-repeat: no-repeat;
     text-align: center;
-    // height: 300px;
+  }
+  .padding-bottom {
+    padding-bottom: .5em;
   }
   .bannerTop > h3, h1 {
     color: white;
@@ -31,6 +34,7 @@ apartments-list {
     text-align: center;
   }
   .headText > h3 {
+    color: #fff !default;
     @media only screen and (min-width : 968px) {
       font-size: 1.8em;
       line-height: 1.10em;

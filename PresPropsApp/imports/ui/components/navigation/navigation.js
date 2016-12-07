@@ -8,39 +8,37 @@ import 'ionic-sdk/release/css/ionic.css';
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 
-import webTemplate from './web.html';
-import mobileTemplate from './mobile.html';
+import template from './navigation.html';
 import { name as ApartmentDetails } from '../apartmentDetails/apartmentDetails';
 
-
-class Navigation {
-  constructor($scope, $reactive, $stateParams) {
-    'ngInject';
-
-    $reactive(this).attach($scope);
-
-    this.userId = $stateParams.userId;
-
-    this.helpers({
-      findUserId() {
-        return Meteor.userId();
-      }
-    });
-  }
-}
+//
+// class Navigation {
+//   constructor($scope, $reactive, $stateParams) {
+//     'ngInject';
+//
+//     $reactive(this).attach($scope);
+//
+//     this.userId = $stateParams.userId;
+//
+//     this.helpers({
+//       findUserId() {
+//         return Meteor.userId();
+//       }
+//     });
+//   }
+// }
 
 const name = 'navigation';
-const template = Meteor.isCordova ? mobileTemplate : webTemplate;
 
 // create a module
 export default angular.module(name, [
-  angularMeteor,
-  uiRouter,
-  ApartmentDetails,
-  'accounts.ui',
-  'ionic'
+  angularMeteor
+  // uiRouter,
+  // ApartmentDetails,
+  // 'accounts.ui',
+  // 'ionic'
 ]).component(name, {
   template,
-  controllerAs: name,
-  controller: Navigation
+  controllerAs: name
+  // controller: Navigation
 });
