@@ -4,36 +4,35 @@ import uiRouter from 'angular-ui-router';
 
 import { Meteor } from 'meteor/meteor';
 
-import webTemplate from './web.html';
 import mobileTemplate from './mobile.html';
-import { name as BackBayInfo } from '../backBayInfo/backBayInfo';
+import { name as BackBayMap } from '../backBayMap/backBayMap';
 
-class NeighborhoodInfo {
+class BackBayInfo {
   constructor($stateParams) {
     'ngInject';
   }
 }
 
 const name = 'neighborhoodInfo';
-const template = Meteor.isCordova ? mobileTemplate : webTemplate;
+const template =  mobileTemplate;
 
  // create a module
  export default angular.module(name, [
    angularMeteor,
-   BackBayInfo
+   BackBayMap
  ]).component(name, {
    template,
    uiRouter,
    controllerAs: name,
-   controller: NeighborhoodInfo
+   controller: BackBayInfo
  })
    .config(config);
 
  function config($stateProvider) {
    'ngInject';
    $stateProvider
-     .state('neighborhoodInfo', {
-       url: '/neighborhoods',
-       template: '<neighborhood-info></neighborhood-info>'
+     .state('backBayInfo', {
+       url: '/neighborhoods/BackBay',
+       template: '<backBay-info></backBay-info>'
      });
  }

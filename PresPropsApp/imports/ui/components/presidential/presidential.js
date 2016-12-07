@@ -19,6 +19,7 @@ import { name as ApartmentDetails } from '../apartmentDetails/apartmentDetails';
 import { name as UserProfile } from '../userProfile/userProfile';
 import { name as Navigation } from '../navigation/navigation';
 import { name as Neighborhoods } from '../neighborhoodInfo/neighborhoodInfo';
+// import { name as BackBayMap } from '../neighborhoodInfo/backBayInfo/backBayMap/backBayMap';
 
 
 class Presidential {}
@@ -37,6 +38,7 @@ export default angular.module(name, [
   Navigation,
   UserProfile,
   Neighborhoods,
+  // BackBayMap,
   'accounts.ui',
   'ionic'
   ]).component(name, {

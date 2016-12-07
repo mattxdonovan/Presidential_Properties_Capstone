@@ -7,9 +7,7 @@ import { Meteor } from 'meteor/meteor';
 import webTemplate from './web.html';
 import mobileTemplate from './mobile.html';
 import { Apartments } from '../../../api/apartments/collection';
-import { name as RemoveFavorite } from '../removeFavorite/removeFavorite'
-import { name as BostonMap } from '../bostonMap/bostonMap'
-
+import { name as RemoveFavorite } from '../removeFavorite/removeFavorite';
 
 class ApartmentsList {
   constructor($scope, $reactive) {
@@ -35,7 +33,6 @@ export default angular.module(name, [
   angularMeteor,
   uiRouter,
   RemoveFavorite,
-  BostonMap,
   'accounts.ui'
 ]).component(name, {
   template,
