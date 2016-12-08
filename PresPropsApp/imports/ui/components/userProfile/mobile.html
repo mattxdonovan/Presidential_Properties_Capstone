@@ -1,7 +1,92 @@
 <ion-view hide-back-button="true">
-  <ion-content padding="true" class="has-header">
+  <ion-content padding="true" class="has-header has-footer">
+    <div class="center padding-top">
+      <h3 class='headText' style="color: #fff; font-size: 1em;">Currently Available Apartments</h3>
+    </div>
     <div class="list list-mobile">
-
+      <div class="list" ng-repeat="favorite in userProfile.favoritesFind">
+        <a class="item item-thumbnail-left" ui-sref="apartmentDetails({ apartmentId:favorite.favoriteId})">
+          <img src="{{favorite.piclink}}">
+          <h2>{{favorite.title}}</h2>
+          <p>{{favorite.price}}</p>
+          <div class="">
+            <img src="images/bed-icon.png" alt="" /><p>{{favorite.beds}}</p>
+          </div>
+          <div class="">
+            <img src="images/shower-icon.png" alt="" /><p>{{favorite.baths}}</p>
+          </div>
+        </a>
+        <remove-favorite favorite="favorite"></remove-favorite>
+      </div>
     </div>
   </ion-content>
 </ion-view>
+
+
+
+<!-- fake it data for emergency -->
+
+<!-- <ion-view hide-back-button="true">
+  <ion-content padding="true" class="has-header has-footer">
+    <div class="list list-mobile " id="hide-this">
+      <div class="list">
+        <a class="item item-thumbnail-left" ui-sref="apartment/ohxFweiF9hrCyePrp})">
+          <img src="http://yourbostonapartments.com/wp-content/uploads/2016/12/733b6bbA.jpg">
+          <h3>Back Bay Beacon St <br> Renovated 1Bedroom <br> Available January 1</h3>
+          <p>$2,700</p>
+          <div class="apartment-description">
+            <div class="center">
+              <p>Bathrooms: 1</p>
+            </div>
+            <div class="center">
+              <p>Bedrooms: 1</p>
+            </div>
+          </div>
+        </a>
+        <div class="centerFlex">
+          <button class="button icon-left ion-heart-broken button-assertive" onClick="hide('#hide-this')" style="width:100%;">Remove from Favorites</button>
+        </div>
+      </div>
+    </div>
+    <div class="list list-mobile">
+      <div class="list">
+        <a class="item item-thumbnail-left" ui-sref="apartment/ohxFweiF9hrCyePrp})">
+          <img src="http://yourbostonapartments.com/wp-content/uploads/2016/12/771M1BBA.jpg">
+          <h3>Back Bay Marlborough St<br> Spacious 1Bed  <br> Available February 1 </h3>
+          <p>$3,250</p>
+          <div class="apartment-description">
+            <div class="center">
+              <p>Bathrooms: 1</p>
+            </div>
+            <div class="center">
+              <p>Bedrooms: 1</p>
+            </div>
+          </div>
+        </a>
+        <div class="centerFlex">
+          <remove-favorite favorite="favorite"></remove-favorite>
+        </div>
+      </div>
+    </div>
+    <div class="list list-mobile">
+      <div class="list">
+        <a class="item item-thumbnail-left" ui-sref="apartmentDetails({apartmentId:ohxFweiF9hrCyePrp})">
+          <img src="http://yourbostonapartments.com/wp-content/uploads/2016/11/491b3bba-1-660x600.jpg">
+          <h3>Large Back Bay 1 Bed <br> Including 1 Parking Space <br> Available February 1</h3>
+          <p>$2,975</p>
+          <div class="apartment-description">
+            <div class="center">
+              <p>Bathrooms: 1</p>
+            </div>
+            <div class="center">
+              <p>Bedrooms: 1</p>
+            </div>
+          </div>
+        </a>
+        <div class="centerFlex">
+          <remove-favorite favorite="favorite"></remove-favorite>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view> -->

@@ -19,7 +19,6 @@ import { name as ApartmentDetails } from '../apartmentDetails/apartmentDetails';
 import { name as UserProfile } from '../userProfile/userProfile';
 import { name as Navigation } from '../navigation/navigation';
 import { name as Neighborhoods } from '../neighborhoodInfo/neighborhoodInfo';
-import { name as Auth } from '../auth/auth';
 
 // import { name as BackBayMap } from '../neighborhoodInfo/backBayInfo/backBayMap/backBayMap';
 
@@ -37,10 +36,9 @@ export default angular.module(name, [
   uiRouter,
   ApartmentsList,
   ApartmentDetails,
-  // Navigation,
+  Navigation,
   UserProfile,
   Neighborhoods,
-  Auth,
   // BackBayMap,
   'accounts.ui',
   'ionic'

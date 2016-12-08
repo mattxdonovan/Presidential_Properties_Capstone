@@ -21,12 +21,12 @@ class UserProfile {
 
     $reactive(this).attach($scope);
 
-    this.userId = $stateParams.userId;
+    this.userId = Meteor.userId();
 
     this.helpers({
       favoritesFind() {
         return Favorites.find({
-          user_id: $stateParams.userId
+          user_id: this.userId
         });
       }
     });

@@ -13,7 +13,7 @@ class BackBayInfo {
   }
 }
 
-const name = 'neighborhoodInfo';
+const name = 'backBayInfo';
 const template =  mobileTemplate;
 
  // create a module
