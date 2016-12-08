@@ -6,13 +6,14 @@ import { Meteor } from 'meteor/meteor';
 
 import mobileTemplate from './mobile.html';
 import { name as BackBayMap } from '../backBayMap/backBayMap';
+// import { name as NeighborhoodInfo } from '../neighborhoodInfo/neighborhoodInfo';
+
 
 class BackBayInfo {
   constructor($stateParams) {
     'ngInject';
   }
 }
-
 const name = 'backBayInfo';
 const template =  mobileTemplate;
 
@@ -20,6 +21,7 @@ const template =  mobileTemplate;
  export default angular.module(name, [
    angularMeteor,
    BackBayMap
+  //  NeighborhoodInfo
  ]).component(name, {
    template,
    uiRouter,
@@ -32,7 +34,7 @@ const template =  mobileTemplate;
    'ngInject';
    $stateProvider
      .state('backBayInfo', {
-       url: '/neighborhoods/BackBay',
-       template: '<backBay-info></backBay-info>'
+       url: '/BackBay',
+       template: '<backBay-Info></backBay-Info>'
      });
  }
